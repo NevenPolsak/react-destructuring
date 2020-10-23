@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+const employee = {
+  name:"Jack",
+  salary:"60$",
+  addres:{
+      street:"Lincon Bridge 65",
+      salary:"80$"
+  }
+};
+
 function App() {
+    const {name,salary:workerSalary,addres} = employee;
+    const {street,salary:addresSalary} = addres
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h4>Name: {name} Work Salary: {workerSalary}</h4>
+     <h4>Addres:{street} Addres Salary:{addresSalary}</h4>
     </div>
   );
 }
